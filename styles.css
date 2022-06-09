@@ -1,0 +1,300 @@
+:root {
+    --color-primary: #eb9972;
+    --color-secondary: #b7464e;
+    --color-tertiary: #2d2c49;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background: rgb(235, 153, 114);
+    background: linear-gradient(180deg, rgba(235, 153, 114, 1) 0%, rgba(183, 70, 78, 1) 50%, rgba(45, 44, 73, 1) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    display: grid;
+    place-content: center;
+    height: 100%;
+}
+
+@media (min-width: 1024px) {
+    .container {
+        margin-top: 50px;
+        height: auto;
+    }
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 450px;
+    width: 350px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    font-size: 19px;
+    border-radius: 10px;
+    transition: all .5s ease-in-out;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.register-button {
+    background-color: var(--color-tertiary);
+    color: var(--color-primary) !important;
+    border: 3px solid var(--color-secondary);
+}
+
+.register-button:hover {
+    background-color: var(--color-primary);
+    color: var(--color-tertiary) !important;
+    border: 3px solid var(--color-secondary);
+}
+
+.login-button {
+    background-color: var(--color-tertiary);
+    color: var(--color-secondary) !important;
+    border: 3px solid var(--color-primary);
+}
+
+.login-button:hover {
+    background-color: var(--color-primary);
+    color: var(--color-tertiary) !important;
+    border: 3px solid var(--color-secondary);
+}
+
+.navbar-pc,
+.lorem-pc {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .login-container {
+        width: 400px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .login-container {
+        width: 950px;
+        height: 350px;
+    }
+
+    .logo-mobile {
+        display: none;
+    }
+
+    .navbar-pc {
+        display: block;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .lorem-pc {
+        display: block;
+        color: white;
+        font-size: 20px;
+        text-justify: auto;
+        padding: 0 30px;
+    }
+
+    .buttons {
+        flex-direction: row;
+    }
+
+    .buttons a {
+        margin: 0 20px;
+
+    }
+
+    .logo-pc {
+        height: 75px;
+        width: 75px;
+        padding: 7px;
+    }
+}
+
+/* LANDING */
+.form-busqueda {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 20px 25px;
+}
+
+.form-busqueda input,
+.form-busqueda button {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    color: var(--color-primary) !important;
+    outline: none;
+}
+
+.form-busqueda input::placeholder {
+    color: var(--color-primary);
+}
+
+.form-busqueda button {
+    border: 2px solid var(--color-secondary);
+    padding: 8px 11px;
+    border-radius: 13px;
+    transition: all .5s ease-in-out;
+
+}
+
+.form-busqueda button:hover {
+    background-color: var(--color-primary);
+    color: var(--color-tertiary) !important;
+    border: 2px solid var(--color-tertiary);
+    transform: scale(1.2);
+}
+
+.volver-button {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    transition: all .5s ease-in-out;
+}
+
+.volver-button:hover {
+    color: var(--color-primary);
+    transform: scale(1.2);
+}
+
+@media (min-width: 1024px) {
+    .form-busqueda {
+        width: 700px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .form-busqueda input {
+        flex-grow: 1;
+    }
+}
+
+/* MUSIC */
+.music-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 570px;
+    width: 305px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    border: 2px solid var(--color-primary);
+    width: 14rem !important;
+}
+
+.song,
+.autor {
+    padding: 5px 10px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px var(--color-tertiary);
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
+
+.song:hover,
+.autor:hover {
+    color: var(--color-primary);
+    text-shadow: 1px 1px 1px var(--color-tertiary);
+}
+
+.song i {
+    color: var(--color-secondary);
+    text-shadow: 1px 1px 1px white;
+}
+
+.autor {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.card-body {
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.card-body i {
+    font-size: 25px;
+    padding: 10px;
+}
+
+.card-body button {
+    background-color: transparent !important;
+    border: 2px solid var(--color-primary);
+    border-radius: 10px;
+    color: var(--color-secondary);
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+
+}
+
+.card-body button:hover {
+    border: 2px solid var(--color-secondary);
+    background-color: var(--color-primary) !important;
+    color: var(--color-tertiary);
+    border-radius: 10px;
+    transform: scale(1.2);
+}
+
+.carousel-control-next {
+    right: -45px !important;
+}
+
+.carousel-control-prev {
+    left: -45px !important;
+}
+
+@media (min-width: 450px) {
+    .music-container {
+        width: 380px;
+        height: 650px;
+
+    }
+
+    .card {
+        width: 18rem !important
+    }
+}
+
+@media (min-width: 1024px) {
+    .music-container {
+        height: 700px;
+        width: 650px;
+    }
+
+    .card {
+        width: 22rem !important;
+    }
+}
